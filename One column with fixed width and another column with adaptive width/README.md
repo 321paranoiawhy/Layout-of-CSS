@@ -42,6 +42,30 @@ But box-shadow will make the left column have a left margin of 1.5 em.
 [ View it on gist.github.com] ( https://gist.github.com/321paranoiawhy/65cb0bb7ad20c9cfa8dec17c69b80ff0 )
 
 To solve it, a new container should wrap around the whole table and apply a left and right `negative margin` of -1.5 em to counteract the 1.5 em of the border spacing.
+The contents of .css file are:
+
+```CSS
+.container {
+    display: table;
+    border-spacing: 1.5em;
+    box-shadow: 2px 5px 12px;
+}
+.wrapper {
+    margin: 0 -1.5em;
+}
+.left {
+    display: table-cell;
+    width: 200px;
+    background-image: linear-gradient(to bottom right, #c973ff, #aebaf8);
+    box-shadow: 2px 5px 12px;
+}
+.right {
+    display: table-cell;
+    width: calc(100% - 200px);
+    background-image: linear-gradient(to bottom right, #c973ff, #aebaf8);
+    box-shadow: 2px 5px 12px;
+}
+```
 
 [ View it on codepen.io] ( https://codepen.io/paraoiawhy/pen/mdqgEQd )
 
