@@ -1,0 +1,14 @@
+div {
+    color: black;
+    background-image: linear-gradient(to bottom right, #c973ff, #aebaf8);
+    box-shadow: 2px 5px 12px;
+}
+.left {
+    float: left;
+    width: 200px;
+    margin: 0 10px;
+}
+.right {
+    float: left;
+    width: calc(100% - 220px);
+}
