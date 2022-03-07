@@ -12,8 +12,39 @@ Here are two ways to solve the problem: using `CSS table layout` and using `flex
 
 ## Using __CSS table layout__
 
-Using `CSS table layout` can make the height of two columns are equal and the column with lower height will __extend__ to the height of higher column. The contents of 
-.css file are:
+Using `CSS table layout` can make the height of two columns are equal and the column with lower height will __extend__ to the height of higher column.
+
+The contents of `.html` file are:
+
+```HTML
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>1.2</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="left">Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus repellendus labore
+            consequuntur ad debitis dicta amet corrupti accusamus optio? Sed, aut vel. Voluptatem beatae quo eius ipsam
+            quae voluptas. Dolorum ducimus unde debitis molestias eum. Sapiente, dolore quia? Laudantium quas officiis
+            dolore tempora ab saepe quibusdam reprehenderit recusandae adipisci similique.</div>
+        <div class="right">Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus repellendus labore
+            consequuntur ad debitis dicta amet corrupti accusamus optio? Sed, aut vel. Voluptatem beatae quo eius ipsam
+            quae voluptas. Dolorum ducimus unde debitis molestias eum. Sapiente, dolore quia? Laudantium quas officiis
+            dolore tempora ab saepe quibusdam reprehenderit recusandae adipisci similique.</div>
+    </div>
+</body>
+
+</html>
+```
+
+The contents of `.css` file are:
 
 ```CSS
 .container {
@@ -35,13 +66,50 @@ Using `CSS table layout` can make the height of two columns are equal and the co
 }
 ```
 
-But box-shadow will make the left column have a left margin of 1.5 em.
+__But__ box-shadow will make the left column have a left margin of 1.5 em.
 
 [ View it on codepen.io] ( https://codepen.io/paraoiawhy/pen/qBVwNML )
 
 [ View it on gist.github.com] ( https://gist.github.com/321paranoiawhy/65cb0bb7ad20c9cfa8dec17c69b80ff0 )
 
 To solve it, a new container should wrap around the whole table and apply a left and right `negative margin` of -1.5 em to counteract the 1.5 em of the border spacing.
+
+The contents of `.html` file are:
+
+```HTML
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>1.3</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="wrapper">
+        <div class="container">
+            <div class="left">Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus repellendus labore
+                consequuntur ad debitis dicta amet corrupti accusamus optio? Sed, aut vel. Voluptatem beatae quo eius
+                ipsam
+                quae voluptas. Dolorum ducimus unde debitis molestias eum. Sapiente, dolore quia? Laudantium quas
+                officiis
+                dolore tempora ab saepe quibusdam reprehenderit recusandae adipisci similique.</div>
+            <div class="right">Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus repellendus labore
+                consequuntur ad debitis dicta amet corrupti accusamus optio? Sed, aut vel. Voluptatem beatae quo eius
+                ipsam
+                quae voluptas. Dolorum ducimus unde debitis molestias eum. Sapiente, dolore quia? Laudantium quas
+                officiis
+                dolore tempora ab saepe quibusdam reprehenderit recusandae adipisci similique.</div>
+        </div>
+    </div>
+</body>
+
+</html>
+```
+
 The contents of .css file are:
 
 ```CSS
