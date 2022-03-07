@@ -6,14 +6,14 @@ __But__ the height of two columns are __not equal__.
 
 [ View it in codepen.io: ] ( https://codepen.io/paraoiawhy/pen/RwjObxy )
 
-Here are two ways to solve the problem: using __CSS table layout__ and using __flexbox__.
+Here are two ways to solve the problem: using `CSS table layout` and using `flexbox`.
 
 ## Using __CSS table layout__
 
-Using __CSS table layout__ can make the height of two columns are equal and the column with lower height will __extend__ to the height of higher column. The contents of 
+Using `CSS table layout` can make the height of two columns are equal and the column with lower height will __extend__ to the height of higher column. The contents of 
 .css file are:
 
-···CSS
+```CSS
 .container {
     display: table;
     box-shadow: 2px 5px 12px;
@@ -34,11 +34,11 @@ Using __CSS table layout__ can make the height of two columns are equal and the 
     background-image: linear-gradient(to bottom right, #c973ff, #aebaf8);
     box-shadow: 2px 5px 12px;
 }
-···
+```
 
 But box-shadow will make the left column have a left margin of 1.5 em.
 
-To solve it, a new container should wrap around the whole table and apply a left and right margin of -1.5 em to counteract the 1.5 em of the border spacing.
+To solve it, a new container should wrap around the whole table and apply a left and right `negative margin` of -1.5 em to counteract the 1.5 em of the border spacing.
 
 [ View it in codepen.io: ] ( https://codepen.io/paraoiawhy/pen/LYOvYjg )
 ## Using flexbox
